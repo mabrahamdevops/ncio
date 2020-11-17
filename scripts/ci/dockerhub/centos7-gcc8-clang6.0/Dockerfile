@@ -3,11 +3,11 @@ LABEL William F Godoy williamfgc@yahoo.com
 LABEL Mark Abraham markabraham3232@gmail.com 
 
 RUN set -x  \
-  && echo "[SCL-core]"                                                                                         > /etc/yum.repos.d/CentOS-Base.repo \
+  && echo "[SCL-core]"                                                                                          >> /etc/yum.repos.d/CentOS-Base.repo \
   && echo "name=Springdale SCL Base \$releasever - \$basearch"                                                  >> /etc/yum.repos.d/CentOS-Base.repo \
   && echo "mirrorlist=http://springdale.princeton.edu/data/springdale/SCL/\$releasever/\$basearch/mirrorlist"   >> /etc/yum.repos.d/CentOS-Base.repo \
   && echo "#baseurl=http://springdale.princeton.edu/data/springdale/SCL/\$releasever/\$basearch"                >> /etc/yum.repos.d/CentOS-Base.repo \
-  && echo "gpgcheck=0"                                                                                        >> /etc/yum.repos.d/CentOS-Base.repo
+  && echo "gpgcheck=0"                                                                                          >> /etc/yum.repos.d/CentOS-Base.repo
 
 RUN yum update -y &&\
     yum upgrade -y &&\

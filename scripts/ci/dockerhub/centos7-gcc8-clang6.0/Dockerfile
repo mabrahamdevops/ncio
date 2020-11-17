@@ -18,7 +18,7 @@ RUN yum update -y &&\
 # ninja-build 8
     yum install http://repo.okay.com.mx/centos/7/x86_64/release/okay-release-1-1.noarch.rpm -y &&\
     yum install git ninja-build python3-pip hdf5-devel pkg-config which -y &&\   
-    pip3 install meson &&\
+    pip3 install meson --upgrade &&\
 # enable gcc and clang compilers
     echo "source scl_source enable devtoolset-8" >> ~/.bash_profile &&\
     echo "source scl_source enable llvm-toolset-6.0" >> ~/.bash_profile &&\
